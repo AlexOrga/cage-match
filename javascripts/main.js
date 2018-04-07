@@ -2,6 +2,16 @@ const printToDom = (divId, string) => {
     document.getElementById(divId).innerHTML = string;
 };
 
+const buildDomString = (playerinfo) => {
+    let domString = '';
+    domString += `<div class="player-info">`;
+    domString +=    `<img src="${playerinfo.gravatar_url}">`;
+    domString +=    `<h3>${playerinfo.name}</h3>`;
+    domString +=    `<h4>${playerinfo.points.total}</h4>`;
+    domString += `</div>`;
+    printToDom("players", domString);
+};
+
 function successFunction() {
     const data = JSON.parse(this.responseText);
     buildDomString(data);
