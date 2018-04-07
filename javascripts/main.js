@@ -2,6 +2,11 @@ const printToDom = (divId, string) => {
     document.getElementById(divId).innerHTML = string;
 };
 
+function successFunction() {
+    const data = JSON.parse(this.responseText);
+    buildDomString(data);
+}
+
 function xhrError() {
     alert('Sorry, something went wrong. Please contact the coder and tell him to get his act together');
 }
