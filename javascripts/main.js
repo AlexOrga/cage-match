@@ -12,6 +12,10 @@ const buildDomString = (playerinfo) => {
     printToDom("players", domString);
 };
 
+const eventListener = () => {
+    
+};
+
 function successFunction() {
     const data = JSON.parse(this.responseText);
     buildDomString(data);
