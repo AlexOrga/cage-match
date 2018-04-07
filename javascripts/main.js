@@ -81,9 +81,21 @@ function loadForSinglePoints() {
     const player1 = document.getElementById("player1-input").value;
     const player2 = document.getElementById("player2-input").value;
     const data1 = JSON.parse(this.responseText);
-    caryPlayer(data1, player2);
+    getSecondPlayer(data1, player2);
 }
 
+const getSecondPlayer = (data1, player) => {
+    let myRequest = new XMLHttpRequest();
+    myRequest.addEventListener('load', jsonConvert);
+    myRequest.addEventListener('error', xhrError);
+    myRequest.open('GET', `https://teamtreehouse.com/${player}.json`);
+    myRequest.send();
+
+    function jsonConvert(){
+        const data2 = JSON.parse(this.responseText);
+        winner(data1, data2)
+    }
+};
 
 const eventListener = () => {
     const button = document.getElementById("button");
