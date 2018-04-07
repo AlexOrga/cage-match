@@ -1,5 +1,5 @@
 const printToDom = (divId, string) => {
-    document.getElementById(divId).innerHTML = string;
+    document.getElementById(divId).innerHTML += string;
 };
 
 const buildDomString = (playerinfo) => {
@@ -13,7 +13,14 @@ const buildDomString = (playerinfo) => {
 };
 
 const eventListener = () => {
-    
+    const button = document.getElementById("button");
+    button.addEventListener('click', () => {
+        const player1 = document.getElementById("player1-input").value;
+        const player2 = document.getElementById("player2-input").value;
+        genericXhrRequest(player1, successFunction);
+        genericXhrRequest(player2, successFunction);
+        // genericXhrRequest(player1, loadForSinglePoints);
+    });
 };
 
 function successFunction() {
@@ -32,3 +39,9 @@ const genericXhrRequest = (player, callback) => {
     myRequest.open('GET', `https://teamtreehouse.com/${player}.json`);
     myRequest.send();
 };
+
+const startApplication = () => {
+    eventListener();
+};
+
+startApplication();
