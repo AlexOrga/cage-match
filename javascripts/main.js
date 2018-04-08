@@ -47,7 +47,6 @@ const winner = (p1data, p2data) => {
 };
 
 function loadForSinglePoints() {
-    const player1 = document.getElementById("player1-input").value;
     const player2 = document.getElementById("player2-input").value;
     const data1 = JSON.parse(this.responseText);
     getSecondPlayer(data1, player2);
@@ -71,7 +70,6 @@ const eventListener = () => {
     const button = document.getElementById("button");
     button.addEventListener('click', () => {
         const player1 = document.getElementById("player1-input").value;
-        const player2 = document.getElementById("player2-input").value;
         genericXhrRequest(player1, loadForSinglePoints);
     });
 };

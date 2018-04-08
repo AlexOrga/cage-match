@@ -8,7 +8,7 @@ body {
 }
 
 .input-contain {
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .input {
@@ -18,6 +18,22 @@ body {
 .btn {
     margin-top: 100px;
     margin-bottom: 50px;
+}
+
+.header-img {
+    margin: 25px auto;
+    width: 40%;
+    height: 310px;
+    position: relative;
+    background-image: url(http://tjrwrestling.net/wp-content/uploads/2015/09/cena-rollins-cage-e1443038248537.jpg);
+}
+
+#main-img {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 #badges {
