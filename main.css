@@ -1,0 +1,59 @@
+* {
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: rgb(87, 182, 211);
+    color: #f9f9f9;
+}
+
+.input-contain {
+    margin-top: 200px;
+}
+
+.input {
+    color: black;
+}
+
+.btn {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#badges {
+    margin-top: 80px;
+}
+
+.col-md-3 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 10px auto;
+    padding-top: 30px;
+    border: 3px solid #428bca;
+    background-color: #d9534f;
+    height: 100px;
+    width: 30%;
+}
+
+h3 {
+    text-decoration: underline;
+    
+}
+
+h4 {
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.badge-holder {
+    margin: 20px 0;
+    height: 85px;
+}
+
+.badge-icon { 
+    width: 25%;
+    
+}
