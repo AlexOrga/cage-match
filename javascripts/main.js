@@ -88,7 +88,7 @@ const genericXhrRequest = (player, callback) => {
 
 const startApplication = () => {
     eventListener();
-    document.getElementById('player1-input').value = 'alexanderorga';
+    document.getElementById('player1-input').value = 'krissycaron';
     document.getElementById('player2-input').value = 'guil';
 };
 
